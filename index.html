@@ -4,24 +4,40 @@
   <meta charset="UTF-8">
   <title>Delayed GIF Example</title>
   <style>
+    /* Hide GIF initially and make it smaller */
     #myGif {
-      display: none; /* hide initially */
-      width: 300px;  /* adjust size if needed */
+      display: none;   /* hidden at first */
+      width: 200px;    /* adjust smaller width */
+      height: auto;    /* maintain aspect ratio */
+    }
+
+    /* Center GIF on the page */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: transparent; /* keeps page background transparent if needed */
     }
   </style>
 </head>
 <body>
 
-  
   <!-- GIF element -->
-  <img id="myGif" src="https://res.cloudinary.com/dsn1wvo6p/image/upload/v1766514286/Giff2_FInal_bxwo12.gif" alt="Delayed GIF">
+  <img id="myGif" 
+       src="https://res.cloudinary.com/dsn1wvo6p/image/upload/v1766514286/Giff2_FInal_bxwo12.gif" 
+       alt="Delayed GIF">
 
   <script>
-    // Wait 15 seconds then show the GIF
+    // Wait 15 seconds then show GIF
     setTimeout(function() {
       document.getElementById('myGif').style.display = 'block';
     }, 15000); // 15000 ms = 15 seconds
   </script>
+  
 </body>
 </html>
+
 
